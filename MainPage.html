@@ -1,11 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html>
+    <head>
+        <title>Aao Shaadi Karraye</title>
+    </head>
+    <style>
+        body
+        {
+            height: 3000px;
+        }
+
+        .hor-navbar
+        {
+            height: 60px;
+            background-color: #FF6666;
+            display: flex;
+            flex: 1;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        .left-side
+        {
+            display: flex;
+            flex-direction: row;
+            margin-left: 10px;
+            align-items: center;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo
+        {
+            width: 50px;
+            height: 50px;
+            margin-top: 10px;
+        }
+
+        .right-side
+        {
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            top: 3px;
+            right: 0;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search
+        {
+            margin-top: 8px;
+            height: 28px;
+            border-radius: 15px;
+            border: none;
+            width: 100px;
+            z-index: 1;
+            margin-right: 30px;
+            transition: width 0.35s ease;
+            color: lightslategray;
+        }
+
+
+        .search:hover
+        {
+           width: 160px;
+        }
+
+        .search:focus
+        {
+            outline-color: #FCAEAE;
+            border-style: solid;
+            border-width: 1px;
+            color: lightslategray;
+            width: 160px;
+        }
+
+        .menu
+        {
+            height: 20px;
+            width: 20px;
+            flex: 1;
+        }
+
+        .account
+        {
+            width: 40px;
+            height: 30px;
+            margin-top:10px ;
+            color: #FCAEAE;
+        }
+
+        .logo-box
+    {
+        display: grid;
+        grid-template-columns: 60px 1fr;
+        width: 300px;
+        margin-left: 20px;
+        
+    }
+
+    .logo-box p
+    {
+        color: #FFFFFF;
+        font-family: Merriweather;
+    }
+
+    .logo-box span
+    {
+       font-size: xx-large;
+    }
+    </style>
+   <l<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <body>
+        <nav class="hor-navbar">
+            <section class="left-side">
+                <a>
+                    <img src="https://pic.onlinewebfonts.com/thumbnails/icons_280338.svg" class="menu">
+                </a>
+                <div class="logo-box">
+                    <img class="logo" src="https://i.pinimg.com/originals/82/c6/5b/82c65b9bb0a75026fc4c82a438b4cc9b.jpg">
+                    <p><span>A</span>ao <span>S</span>haadi <span>K</span>araaye</p>
+                </div>
+                
+            </section>
+
+            <section class="right-side">
+                    <input class="search" type="search" placeholder="Search Here"></input>
+                    <a href="#" class="login">
+                        <img src="account.svg" class="account">
+                    </a>
+            </section>
+        </nav>
+    </body>
 </html>
