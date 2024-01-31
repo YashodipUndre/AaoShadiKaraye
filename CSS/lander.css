@@ -1,12 +1,13 @@
 body
 {
     height: 3000px;
+    font-family: proxima-nova,sans-serif;
 }
 
 .hor-navbar
 {
     height: 60px;
-    background-color: #FF6666;
+    background-color: #FF90BC;
     display: flex;
     flex: 1;
     position: fixed;
@@ -102,4 +103,37 @@ font-family: Merriweather;
 .logo-box span
 {
 font-size: xx-large;
+}
+.MenuBar{
+    width: 0px;
+    height: 700px;
+    margin-left: -8px;
+    margin-top: 52px;
+    box-shadow: 0px 8px 8px 0px black;
+    background-color:white;
+    transition: 0.4s;
+    position: fixed;
+    overflow-x: hidden;
+}
+.hor-navbar .left-side a img:hover{
+  transition: 0.3s;
+  height: 27px;
+  width: 27px;
+}
+.MenuBar button{
+    width: 200px;
+    height: 40px;
+    background: none;
+    border: none;
+
+}
+.MenuBar button:hover{
+    background-color: #FFEADD;
+    border-radius: 10px;
+}
+.MenuBar button img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-top: 10px;
 }
