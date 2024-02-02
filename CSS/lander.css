@@ -1,23 +1,23 @@
-body
-{
+body {
     height: 3000px;
-    font-family: "Nunito Sans", sans-serif;
     margin: 0;
+    overflow: hidden;
+    font-family: "Nunito Sans", sans-serif;
 }
 
-.hor-navbar
-{
+.hor-navbar {
     height: 60px;
     background-color: #FF90BC;
     display: flex;
     flex: 1;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1;
 }
-.left-side
-{
+
+.left-side {
     display: flex;
     flex-direction: row;
     margin-left: -15px;
@@ -25,62 +25,64 @@ body
     justify-content: center;
     align-items: center;
 }
-.logo
-{
-    width: 50px;
+
+.logo {
+    width: 0px;
     height: 50px;
-    margin-top: 15px;
+    margin-top: 19px;
+    margin-left: 9px;
+    border-radius: 20px;
+    transition: 1s;
 }
 
-.right-side
-{
+.right-side {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
     width: 35%;
-    
-}
-.logo-box 
-{
-display: grid;
-grid-template-columns: 60px 1fr;
-width: 400px;
-margin-left: 20px;
 
 }
 
-.logo-box h1
-{
-color: #F9F9E0;
-font-size: 25px;
-font-family: "Nunito Sans", sans-serif;
+.logo-box {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    width: 400px;
+    margin-left: 10px;
+
 }
 
-.logo-box span
-{
-font-size: 27px;
-font-weight: 800;
-font-family: "Nunito Sans", sans-serif;
+.logo-box h1 {
+    color: #F9F9E0;
+    font-size: 27px;
+    font-family: "Nunito Sans", sans-serif;
 }
-.MenuBar{
+
+.logo-box span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.MenuBar {
     width: 0px;
     height: 700px;
     margin-left: -8px;
     margin-top: 60px;
     box-shadow: 0px 2px 4px 0px black;
-    background-color:#FF90BC;
+    background-color: #FF90BC;
     transition: 0.4s;
-    position: fixed;
+    position: absolute;
     overflow-x: hidden;
-    float: right;
+    z-index: 2;
 }
-.hor-navbar .left-side a img:hover{
-  transition: 0.3s;
-  height: 27px;
-  width: 27px;
+
+.hor-navbar .left-side a img:hover {
+    transition: 0.3s;
+    height: 27px;
+    width: 27px;
 }
-.MenuBar button{
+
+.MenuBar button {
     color: #F9F9E0;
     width: 200px;
     height: 40px;
@@ -89,60 +91,59 @@ font-family: "Nunito Sans", sans-serif;
     font-size: medium;
     margin-top: 20px;
 }
-.MenuBar button:hover{
-    background-color:#F9F9E0;
+
+.MenuBar button:hover {
+    background-color: #F9F9E0;
     border-radius: 20px;
     color: black;
     transition: 0.3s;
     font-size: 18px;
 }
-.MenuBar button img{
+
+.MenuBar button img {
     width: 20px;
     height: 20px;
     margin-right: 10px;
     margin-top: 10px;
 }
-.right-side a{
+
+.right-side a {
     text-decoration: none;
     padding-left: 50px;
     color: #F9F9E0;
 }
-.right-side a:hover{
+
+.right-side a:hover {
     transition: 0.3s;
-font-size: large;
+    font-size: large;
 }
-@media screen and (max-width: 850px) {
 
-  .right-side{
-    display: none;
-  }
-}
-@media screen and (max-width: 500px) {
 
-    .end-side{
-      margin-left: 0px;
-    }
-  }
-.end-side{
+
+.end-side {
     margin-left: 21%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.end-side button{
+
+.end-side button {
     height: 35px;
     width: 100px;
     border-radius: 20px;
     border: transparent;
     background-color: #F9F9E0;
+    
 }
-.end-side button:hover{
+
+.end-side button:hover {
     transition: 0.3s;
     height: 38px;
-width: 107px;
-background-color: #8ACDD7;
+    width: 107px;
+    background-color: #8ACDD7;
 }
-.MenuBar button{
+
+.MenuBar button {
     width: 200px;
     height: 40px;
     background: none;
@@ -155,54 +156,102 @@ background-color: #8ACDD7;
     background: transparent;
     width: 35px;
     height: 35px;
-    margin-left: 8px;
-    margin-top: 10px;
+    margin-left: 10px;
+    margin-top: 12px;
 }
-.hor-navbar button img{
+
+.hor-navbar button img {
     width: 20px;
     height: 20px;
     margin-left: -3px;
 }
-.Main{
+
+.Main {
     width: 100%;
     height: 700px;
     overflow: hidden;
-    background-image: url("/AaoShadiKaraye/Images/center-point-events-03.jpg");
-    background-size: 1300px 700px;
+    background-image: url("/AaoShadiKaraye/Images/center-point-events-03.png");
+    background-size: 1300px 750px;
     background-repeat: no-repeat;
+    position: absolute;
+    z-index: 0;
+   
+}
+
+.Main .Text {
+    margin-left: 400px;
+    margin-top: 450px;
+    text-align: center;
+    background-color: transparent;
+    backdrop-filter: blur(1px);
+    width: 500px;
+    height: 100px;
+    border-radius: 40px;
+    position: absolute;
+    z-index: 1;
     
 }
-.Main .Text{
-    margin-left: 50px;
-    margin-top: 300px;
-    text-align: center;
-}
-.Main .Text h1{
-    color:#F9F9E0;
-    font-size: 45px;
+
+.Main .Text h1 {
+    color: #F9F9E0;
+    font-size: 55px;
     font-weight: 700;
     font-family: "Nunito Sans", sans-serif;
+    -webkit-text-stroke: 0.07vb black;
 }
-.Main .Text h2{
-    color:#F9F9E0;
-    margin-top: -35px;
-    font-size: 27px;
+
+.Main .Text h2 {
+    color: #F9F9E0;
+    margin-top: -50px;
+    font-size: 35px;
     font-weight: 700;
     font-family: "Nunito Sans", sans-serif;
+    -webkit-text-stroke: 0.05vb black;
 }
-.Main button{
+
+.Main button {
     margin-left: 550px;
     height: 50px;
     width: 200px;
     border-radius: 30px;
     background-color: #FF90BC;
     border: solid 1px black;
-    margin-top: -10px;
     font-size: large;
+    margin-top: 600px;
+    position: absolute;
+    z-index: 1;
 }
-.Main button:hover{
-  background-color: #FFC0D9;
-  height: 52px;
-  width: 205px;
-  transition: 0.3s;
+
+.Main button:hover {
+    background-color: #FFC0D9;
+    height: 52px;
+    width: 205px;
+    transition: 0.3s;
+}
+@media screen and (max-width: 850px) {
+
+    .right-side {
+        display: none;
+    }
+    .hor-navbar button img{
+        display: inline;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    #MenuBarResImg{
+        margin-left: -60px;
+    }
+    .end-side button{
+        margin-left: -170px;
+    }
+    .Main .Text{
+        margin-left: 20px;
+    }
+    .Main button{
+        margin-left: 160px;
+    }
+
+    
 }
