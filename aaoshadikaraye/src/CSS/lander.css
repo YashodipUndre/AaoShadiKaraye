@@ -1,5 +1,4 @@
 body {
-    height: 3000px;
     margin: 0;
     overflow: hidden;
     font-family: "Nunito Sans", sans-serif;
@@ -9,45 +8,50 @@ body {
     height: 60px;
     background-color: #FF90BC;
     display: flex;
-    flex: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
     z-index: 1;
+    justify-content:space-between;
+    align-items: center;
 }
 
 .left-side {
     display: flex;
     flex-direction: row;
-    margin-left: -15px;
+    margin-left: -10px;
     align-items: center;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
 }
 
 .logo {
-    width: 0px;
+    width:0px;
     height: 50px;
-    margin-top: 19px;
+    margin-top: 15px;
     margin-left: 9px;
     border-radius: 20px;
-    transition: 1s;
+    transition: 1.5s;
 }
 
 .right-side {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
-    width: 35%;
+    margin-left:-100px;
 
+}
+@media screen and (max-width: 950px) {
+
+    .right-side {
+        display: none;
+    }
+}
+@media screen and (max-width: 950px) {
+    .end-side #MenuBarRes{
+        display: block;
+    }
 }
 
 .logo-box {
     display: grid;
     grid-template-columns: 60px 1fr;
-    width: 400px;
     margin-left: 10px;
 
 }
@@ -67,7 +71,6 @@ body {
     width: 0px;
     height: 700px;
     margin-left: -8px;
-    margin-top: 60px;
     box-shadow: 0px 2px 4px 0px black;
     background-color: #FF90BC;
     transition: 0.4s;
@@ -75,13 +78,6 @@ body {
     overflow-x: hidden;
     z-index: 2;
 }
-
-.hor-navbar .left-side a img:hover {
-    transition: 0.3s;
-    height: 27px;
-    width: 27px;
-}
-
 .MenuBar button {
     color: #F9F9E0;
     width: 200px;
@@ -99,32 +95,21 @@ body {
     transition: 0.3s;
     font-size: 18px;
 }
-
-.MenuBar button img {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    margin-top: 10px;
-}
-
 .right-side a {
     text-decoration: none;
-    padding-left: 50px;
     color: #F9F9E0;
+    margin-left: 100px;
 }
 
 .right-side a:hover {
     transition: 0.3s;
     font-size: large;
 }
-
-
-
 .end-side {
-    margin-left: 21%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    margin-right: 20px;
 }
 
 .end-side button {
@@ -133,6 +118,7 @@ body {
     border-radius: 20px;
     border: transparent;
     background-color: #F9F9E0;
+    margin-right: 10px;
     
 }
 
@@ -151,36 +137,37 @@ body {
 
 }
 
-.hor-navbar #MenuBarRes {
+.end-side #MenuBarRes {
     border: transparent;
     background: transparent;
-    width: 35px;
-    height: 35px;
-    margin-left: 10px;
-    margin-top: 12px;
+    width: 10px;
+    height: 10px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    display: none;
 }
 
 .hor-navbar button img {
     width: 20px;
     height: 20px;
-    margin-left: -3px;
 }
 
 .Main {
     width: 100%;
     height: 700px;
     overflow: hidden;
-    background-image: url("/AaoShadiKaraye/Images/center-point-events-03.png");
-    background-size: 1300px 750px;
+    background-size: 1300px 660px;
     background-repeat: no-repeat;
     position: absolute;
     z-index: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
    
 }
 
 .Main .Text {
-    margin-left: 400px;
-    margin-top: 450px;
+    margin-top: 150px;
     text-align: center;
     background-color: transparent;
     backdrop-filter: blur(1px);
@@ -189,7 +176,7 @@ body {
     border-radius: 40px;
     position: absolute;
     z-index: 1;
-    
+    margin-left: 50px;
 }
 
 .Main .Text h1 {
@@ -198,11 +185,12 @@ body {
     font-weight: 700;
     font-family: "Nunito Sans", sans-serif;
     -webkit-text-stroke: 0.07vb black;
+    margin-top: 1px;
 }
 
 .Main .Text h2 {
     color: #F9F9E0;
-    margin-top: -50px;
+    margin-top: -40px;
     font-size: 35px;
     font-weight: 700;
     font-family: "Nunito Sans", sans-serif;
@@ -210,16 +198,16 @@ body {
 }
 
 .Main button {
-    margin-left: 550px;
     height: 50px;
     width: 200px;
     border-radius: 30px;
     background-color: #FF90BC;
     border: solid 1px black;
     font-size: large;
-    margin-top: 600px;
+    margin-top: 320px;
     position: absolute;
     z-index: 1;
+    margin-left: 50px;
 }
 
 .Main button:hover {
@@ -227,31 +215,4 @@ body {
     height: 52px;
     width: 205px;
     transition: 0.3s;
-}
-@media screen and (max-width: 850px) {
-
-    .right-side {
-        display: none;
-    }
-    .hor-navbar button img{
-        display: inline;
-    }
-}
-
-@media screen and (max-width: 600px) {
-
-    #MenuBarResImg{
-        margin-left: -60px;
-    }
-    .end-side button{
-        margin-left: -170px;
-    }
-    .Main .Text{
-        margin-left: 20px;
-    }
-    .Main button{
-        margin-left: 160px;
-    }
-
-    
 }
